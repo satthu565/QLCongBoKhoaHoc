@@ -1,0 +1,12 @@
+Ch?c nang c?a trang admin g?m nh?ng ch?c nang :
+1. C?p nh?t thông tin cá nhân 
+2. Bài báo , Công b? khoa h?c , Sách giáo trình
+3. Ð? tài hu?ng nghiên c?u
+4.-Qu?n lý các công trình khoa h?c bao g?m c? file m?m. 
+5. ý ki?n trao d?i 
+
+ch?c nang c?a admin t?ng 
+
+1. Qu?n lý gi?ng viên
+2. Qu?n lý danh m?c
+3. Qu?n lý Menu

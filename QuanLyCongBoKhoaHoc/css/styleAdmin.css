@@ -1,0 +1,41 @@
+﻿body {
+}
+.KhungHinh {
+    height: 380px;
+    width: 1135px;
+    border :1px solid #808080;
+    /*background :#a9d5e4;*/
+    clear:both;
+}
+.phantrang
+{
+    text-align : center;
+}
+
+.KhungHinh .KhungHinhXoa {
+    text-align :center;
+}
+
+
+#Info {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    z-index: 9999;
+    border-radius: 2px;
+    background-color: black;
+    box-shadow: 0 0 3px #868686;
+    opacity: .8;
+    min-width: 270px;
+}
+
+    #Info #noidung {
+        padding: 10px 10px 5px;
+    }
+
+        #Info #noidung label {
+            font-weight: bold;
+            /*color:#f96151;*/
+            color: white;
+        }
