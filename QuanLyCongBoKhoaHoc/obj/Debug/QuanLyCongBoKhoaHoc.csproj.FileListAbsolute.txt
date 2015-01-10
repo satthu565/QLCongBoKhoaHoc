@@ -1,0 +1,93 @@
+E:\tot nghiep thuc tap\Tot nghiep\Quan ly Cong Bo Khoa Hoc EPU\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\QuanLyCongBoKhoaHoc.dll
+E:\tot nghiep thuc tap\Tot nghiep\Quan ly Cong Bo Khoa Hoc EPU\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\QuanLyCongBoKhoaHoc.pdb
+E:\tot nghiep thuc tap\Tot nghiep\Quan ly Cong Bo Khoa Hoc EPU\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\obj\Debug\QuanLyCongBoKhoaHoc.dll
+E:\tot nghiep thuc tap\Tot nghiep\Quan ly Cong Bo Khoa Hoc EPU\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\obj\Debug\QuanLyCongBoKhoaHoc.pdb
+E:\tot nghiep thuc tap\Tot nghiep\Quan ly Cong Bo Khoa Hoc EPU\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\obj\Debug\QuanLyCongBoKhoaHoc.csprojResolveAssemblyReference.cache
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\QuanLyCongBoKhoaHoc.dll.config
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\QuanLyCongBoKhoaHoc.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\QuanLyCongBoKhoaHoc.pdb
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Owin.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Newtonsoft.Json.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Owin.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Owin.xml
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Newtonsoft.Json.xml
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\obj\Debug\QuanLyCongBoKhoaHoc.csprojResolveAssemblyReference.cache
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\obj\Debug\QuanLyCongBoKhoaHoc.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\backup\backup4\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\obj\Debug\QuanLyCongBoKhoaHoc.pdb
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\QuanLyCongBoKhoaHoc.dll.config
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\QuanLyCongBoKhoaHoc.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\QuanLyCongBoKhoaHoc.pdb
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Owin.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Newtonsoft.Json.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Owin.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Owin.xml
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Newtonsoft.Json.xml
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\obj\Debug\QuanLyCongBoKhoaHoc.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\obj\Debug\QuanLyCongBoKhoaHoc.pdb
+C:\Users\MinhSatThu\Desktop\Lamptt\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\obj\Debug\QuanLyCongBoKhoaHoc.csprojResolveAssemblyReference.cache
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\QuanLyCongBoKhoaHoc.dll.config
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\QuanLyCongBoKhoaHoc.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\QuanLyCongBoKhoaHoc.pdb
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Owin.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Newtonsoft.Json.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Owin.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Owin.xml
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Newtonsoft.Json.xml
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\obj\Debug\QuanLyCongBoKhoaHoc.csprojResolveAssemblyReference.cache
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\obj\Debug\QuanLyCongBoKhoaHoc.dll
+C:\Users\MinhSatThu\Desktop\Lamptt\TotNghiep\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\obj\Debug\QuanLyCongBoKhoaHoc.pdb
+E:\lưu trữ lịch làm tốt nghiệp\30-12\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\QuanLyCongBoKhoaHoc.dll
+E:\lưu trữ lịch làm tốt nghiệp\30-12\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\QuanLyCongBoKhoaHoc.pdb
+E:\lưu trữ lịch làm tốt nghiệp\30-12\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\lưu trữ lịch làm tốt nghiệp\30-12\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Owin.dll
+E:\lưu trữ lịch làm tốt nghiệp\30-12\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\lưu trữ lịch làm tốt nghiệp\30-12\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\lưu trữ lịch làm tốt nghiệp\30-12\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.Web.Infrastructure.dll
+E:\lưu trữ lịch làm tốt nghiệp\30-12\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Newtonsoft.Json.dll
+E:\lưu trữ lịch làm tốt nghiệp\30-12\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Owin.dll
+E:\lưu trữ lịch làm tốt nghiệp\30-12\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\lưu trữ lịch làm tốt nghiệp\30-12\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Owin.xml
+E:\lưu trữ lịch làm tốt nghiệp\30-12\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\lưu trữ lịch làm tốt nghiệp\30-12\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\lưu trữ lịch làm tốt nghiệp\30-12\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Newtonsoft.Json.xml
+E:\lưu trữ lịch làm tốt nghiệp\30-12\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\obj\Debug\QuanLyCongBoKhoaHoc.dll
+E:\lưu trữ lịch làm tốt nghiệp\30-12\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\obj\Debug\QuanLyCongBoKhoaHoc.pdb
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\QuanLyCongBoKhoaHoc.dll.config
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\QuanLyCongBoKhoaHoc.dll
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\QuanLyCongBoKhoaHoc.pdb
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Owin.dll
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Newtonsoft.Json.dll
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Owin.dll
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.Owin.xml
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\bin\Newtonsoft.Json.xml
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\obj\Debug\QuanLyCongBoKhoaHoc.csprojResolveAssemblyReference.cache
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\obj\Debug\QuanLyCongBoKhoaHoc.dll
+C:\Users\MST\Desktop\QuanLyCongBoKhoaHoc\QuanLyCongBoKhoaHoc\obj\Debug\QuanLyCongBoKhoaHoc.pdb
