@@ -1,0 +1,524 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="QuanLyCongBoKhoaHoc.Site" %>
+
+<%@ Register Src="~/UserControl/Banner.ascx" TagPrefix="uc1" TagName="Banner" %>
+<%@ Register Src="~/UserControl/MenuNgang.ascx" TagPrefix="uc1" TagName="MenuNgang" %>
+<%@ Register Src="~/UserControl/Slides.ascx" TagPrefix="uc1" TagName="Slides" %>
+<%@ Register Src="~/UserControl/TinMoi.ascx" TagPrefix="uc1" TagName="TinMoi" %>
+<%@ Register Src="~/UserControl/MenuDoc.ascx" TagPrefix="uc1" TagName="MenuDoc" %>
+<%@ Register Src="~/UserControl/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+<%@ Register Src="~/UserControl/UcHoTroLienHe.ascx" TagPrefix="uc1" TagName="UcHoTroLienHe" %>
+<%@ Register Src="~/UserControl/chat.ascx" TagPrefix="uc1" TagName="chat" %>
+<%--<%@ Register Src="~/UserControl/UcBreakingNews.ascx" TagPrefix="uc1" TagName="UcBreakingNews" %>--%>
+<%@ Register Src="~/UserControl/ucTinNhanh.ascx" TagPrefix="uc1" TagName="ucTinNhanh" %>
+
+
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title></title>
+   
+   <link href="css/style1.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="css/ChatStyle.css" />
+    <link rel="stylesheet" href="/css/JQueryUI/themes/base/jquery.ui.all.css">
+<%--    <script src="js/jquery-1.8.3.min.js"></script>--%>
+    <link href="css/mst-style.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-1.10.2.js"></script>
+    
+    <style type="text/css">
+        .active1 {
+            background:#337ab7 !important;
+            color:#fff!important;
+        }
+    </style>
+
+</head>
+<body style="background-color:#e9e9e9">
+   <form id="form1" runat="server">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10 content">
+                     <div id="header" style="padding-top:4px" >
+                         <div class="row">
+                             <uc1:Banner runat="server" ID="Banner" />
+                             <uc1:MenuNgang runat="server" ID="MenuNgang" />
+                            <div class="col-lg-9" style="padding: 0">
+                                <uc1:Slides runat="server" ID="Slides" />
+                            </div>
+                            <div class="col-lg-3" style="padding-right:0px">
+                                <uc1:TinMoi runat="server" ID="TinMoi" />
+                            </div>
+                         </div>
+                    </div>
+                    <div class="breaking-news">
+                        <uc1:ucTinNhanh runat="server" id="ucTinNhanh1" />
+                       <%-- <uc1:UcBreakingNews runat="server" ID="UcBreakingNews2" />--%>
+                    </div>
+                    <div class="" id="main">
+                        <div class="left col-lg-3" style="padding-left:0px;">
+                            <uc1:MenuDoc runat="server" ID="MenuDoc" />
+                            <%--<uc1:UcHoTroLienHe runat="server" id="UcHoTroLienHe" />--%>
+                        </div>
+                        <div class="right col-lg-9" style="text-align: justify;padding-right:0px">
+                            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>       
+                     <%--   <div id="spot-im-root">
+                        </div>
+                        <script>!function (t, e, o) {
+                            function p()
+                            {
+                                var t = e.createElement("script");
+                                t.type = "text/javascript", t.async = !0, t.src = ("https:" == e.location.protocol ? "https" : "http") + ":" + o, e.body.appendChild(t)
+                            }
+                            t.spotId = "a3a4a7b4a4d46f165f4b0764a376abc5", t.spotName = "", t.allowDesktop = !0, t.allowMobile = !1, t.containerId = "spot-im-root", p()
+                            }(window.SPOTIM = {}, document, "//www.spot.im/embed/scripts/launcher.js");
+
+                        </script>--%>
+                         <div style="height:100px;width:600px;margin-bottom:325px" id="idchat" class="chat">
+                             <div id="divContainer">
+                             <div id="divLogin" class="login">
+                                <div>
+                                    Nhập tên của bạn:<br />
+                                    <input id="txtNickName" type="text" class="textBox" />
+                                </div>
+                                <div id="divButton">
+                                    <input id="btnStartChat" type="button" class="submitButton" value="Bắt Đầu" />
+                                </div>
+                            </div>
+                             <div id="divChat" class="chatRoom">
+                                <!--<div class="title">
+                                    Welcome to Chat Room [<span id='spanUser'></span>]
+
+                                </div>-->
+                                <div class="content chatcontent">
+                                    <!--<div id="divChatWindow" class="chatWindow">
+                                    </div>-->
+                                    <div class="header" style="background-color:#34abd6;color:white">
+                                        
+                                        <div style="float:right; margin-right:5px">
+                                            <img id="closechat" style="cursor:pointer;" src="/Images/delete.png">
+                                        </div>
+                                        <div style="float:right; margin-right:2px">
+                                            <img id="minimum" style="cursor:pointer;" src="/Images/minimum.png">
+                                        </div>
+                                        <span class="selText" style="color:whites;text-transform:uppercase;font-size:14px; font-weight:bold">Thành viên online</span>
+
+                                    </div>
+                                    <div id="divusers" class="users">
+                                    </div>
+                                </div>
+                                <!--<div class="messageBar">
+                                    <input class="textbox" type="text" id="txtMessage" />
+                                    <input id="btnSendMsg" type="button" value="Send" class="submitButton" />
+                                </div>-->
+                            </div>
+                            </div>
+                            <input id="hdId" type="hidden" />
+                            <input id="hdUserName" type="hidden" />
+                         </div>
+                                    <div class="header minimum">
+                                        <div style="float:right; margin-right:5px">
+                                            <img id="closechatmini" style="cursor:pointer;" src="/Images/delete.png">
+                                        </div>
+                                        <div style="float:right; margin-right:5px">
+                                            <img id="minimummini" style="cursor:pointer;" src="/Images/maximum.png">
+                                        </div>
+                                        <span class="selText" style="color:yellow;padding-left: 5px">Hiện thành viên</span>
+
+                                    </div>
+                        <!--<input type="button" name="name" class="btlchat btndemo" id="btnshowchat" value="Hỏi Đáp" />-->
+                        <a class="btlchat btndemo" id="btnshowchat">Hỏi Đáp</a>
+                    </div>
+                    
+                   <div style="position:fixed" class="row chat">
+
+                    </div>
+                    <div class="footer row">
+                        <uc1:Footer runat="server" ID="Footer" />
+                    </div>
+                </div>
+            </div>
+        </div>
+   </form>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+   <link href="/css/style.css" rel="stylesheet" />
+
+     <script src="js/bootstrap.js"></script>
+<%--     css menu ngang--%>
+    <script src="../../js/jcarousellite_1.js" type="text/javascript"></script>
+        <script type="text/javascript">
+
+            $(".newsticker-jcarousellite").jCarouselLite({
+                vertical: true,
+                hoverPause: true,
+                visible: 3,
+                auto: 500,
+                speed: 1000
+            });
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".glyphicon-remove").click(function () {
+                $(this).parents(".panel").remove();
+            });
+
+            $(".glyphicon-resize-vertical").click(function () {
+                alert("an");
+                $(this).parents('.panel').find('.panel-body').slideToggle("slow");
+            });
+
+            $(".pagdingpage").click(function () {
+                $(this).css("color", "red");
+            });
+        });
+     </script>
+
+    <script src="../../Scripts/ui/jquery.ui.core.js"></script>
+    <script src="../../Scripts/ui/jquery.ui.widget.js"></script>
+    <script src="../../Scripts/ui/jquery.ui.mouse.js"></script>
+    <script src="../../Scripts/ui/jquery.ui.draggable.js"></script>
+    <script src="../../Scripts/ui/jquery.ui.resizable.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .chat{
+            
+	        right:200px;
+	        height:26px;
+	        width:100%;
+            
+	        
+	        line-height:26px;
+	        /* position on bottom */
+	        bottom: 0px;
+                
+	        position: fixed;
+	        z-index: 100;
+	        /* transparent background */
+	        
+                }
+    </style>
+    <script src="../../Scripts/jquery.signalR-1.0.0.js"></script>
+    <!--Reference the autogenerated SignalR hub script. -->
+    <script src="/signalr/hubs"></script>
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            setScreen(false);
+
+            // Declare a proxy to reference the hub.
+            var chatHub = $.connection.chatHub;
+
+            registerClientMethods(chatHub);
+
+            // Start Hub
+            $.connection.hub.start().done(function () {
+
+                registerEvents(chatHub)
+
+            });
+
+        });
+
+        function setScreen(isLogin) {
+
+            if (!isLogin) {
+
+                $("#divChat").hide();
+                $("#divLogin").show();
+            }
+            else {
+
+                $("#divChat").show();
+                $("#divLogin").hide();
+            }
+
+        }
+
+        function registerEvents(chatHub) {
+
+            $("#btnStartChat").click(function () {
+
+                var name = $("#txtNickName").val();
+                if (name.length > 0) {
+                    chatHub.server.connect(name);
+                }
+                else {
+                    alert("Hãy nhập tên của bạn");
+                }
+
+            });
+
+
+            $('#btnSendMsg').click(function () {
+
+                var msg = $("#txtMessage").val();
+                if (msg.length > 0) {
+
+                    var userName = $('#hdUserName').val();
+                    chatHub.server.sendMessageToAll(userName, msg);
+                    $("#txtMessage").val('');
+                }
+            });
+
+
+            $("#txtNickName").keypress(function (e) {
+                if (e.which == 13) {
+                    $("#btnStartChat").click();
+                }
+            });
+
+            $("#txtMessage").keypress(function (e) {
+                if (e.which == 13) {
+                    $('#btnSendMsg').click();
+                }
+            });
+
+
+        }
+
+        function registerClientMethods(chatHub) {
+
+            // Calls when user successfully logged in
+            chatHub.client.onConnected = function (id, userName, allUsers, messages) {
+
+                setScreen(true);
+
+                $('#hdId').val(id);
+                $('#hdUserName').val(userName);
+                $('#spanUser').html(userName);
+
+                // Add All Users
+                for (i = 0; i < allUsers.length; i++) {
+
+                    AddUser(chatHub, allUsers[i].ConnectionId, allUsers[i].UserName);
+                }
+
+                // Add Existing Messages
+                for (i = 0; i < messages.length; i++) {
+
+                    AddMessage(messages[i].UserName, messages[i].Message);
+                }
+
+
+            }
+
+            // On New User Connected
+            chatHub.client.onNewUserConnected = function (id, name) {
+
+                AddUser(chatHub, id, name);
+            }
+
+
+            // On User Disconnected
+            chatHub.client.onUserDisconnected = function (id, userName) {
+
+                $('#' + id).remove();
+
+                var ctrId = 'private_' + id;
+                $('#' + ctrId).remove();
+
+
+                var disc = $('<div class="disconnect">"' + userName + '" Đã Thoát.</div>');
+
+                $(disc).hide();
+                $('#divusers').prepend(disc);
+                $(disc).fadeIn(200).delay(2000).fadeOut(200);
+
+            }
+
+            chatHub.client.messageReceived = function (userName, message) {
+
+                AddMessage(userName, message);
+            }
+
+
+            chatHub.client.sendPrivateMessage = function (windowId, fromUserName, message) {
+
+                var ctrId = 'private_' + windowId;
+
+
+                if ($('#' + ctrId).length == 0) {
+
+                    createPrivateChatWindow(chatHub, windowId, ctrId, fromUserName);
+
+                }
+
+                $('#' + ctrId).find('#divMessage').append('<div class="message"><span class="userName">' + fromUserName + '</span>: ' + message + '</div>');
+
+                // set scrollbar
+                var height = $('#' + ctrId).find('#divMessage')[0].scrollHeight;
+                $('#' + ctrId).find('#divMessage').scrollTop(height);
+
+            }
+
+        }
+
+        function AddUser(chatHub, id, name) {
+
+            var userId = $('#hdId').val();
+
+            var code = "";
+
+            if (userId == id) {
+
+                code = $('<div class="loginUser">' + name + "</div>");
+
+            }
+            else {
+
+                code = $('<a id="' + id + '" class="user" >' + name + '<p style="float:right;color:#5ade0f">Đang online  <img src="/Images/iconchat.png"/ style="width:15px"></p><a>');
+
+                $(code).click(function () {
+
+                    var id = $(this).attr('id');
+
+                    if (userId != id)
+                        OpenPrivateChatWindow(chatHub, id, name);
+
+                });
+            }
+
+            $("#divusers").append(code);
+
+        }
+
+        function AddMessage(userName, message) {
+            $('#divChatWindow').append('<div class="message"><span class="userName">' + userName + '</span>: ' + message + '</div>');
+
+            var height = $('#divChatWindow')[0].scrollHeight;
+            $('#divChatWindow').scrollTop(height);
+        }
+
+        function OpenPrivateChatWindow(chatHub, id, userName) {
+
+            var ctrId = 'private_' + id;
+
+            if ($('#' + ctrId).length > 0) return;
+
+            createPrivateChatWindow(chatHub, id, ctrId, userName);
+
+        }
+
+        function createPrivateChatWindow(chatHub, userId, ctrId, userName) {
+
+            var div = '<div id="' + ctrId + '" class="ui-widget-content draggable" rel="0">' +
+                       '<div class="header">' +
+                          '<div  style="float:right;">' +
+                              '<img id="imgDelete"  style="cursor:pointer;margin-right:5px " src="/Images/delete.png"/>' +
+                           '</div>' +
+
+                           '<span class="selText" rel="0">' + userName + '</span>' +
+                       '</div>' +
+                       '<div id="divMessage" class="messageArea">' +
+
+                       '</div>' +
+                       '<div class="buttonBar">' +
+                          '<input id="txtPrivateMessage" class="msgText" type="text"   />' +
+                          '<input id="btnSendMessage" class="submitButton button" type="button" value="Send"   />' +
+                       '</div>' +
+                    '</div>';
+
+            var $div = $(div);
+
+            // DELETE BUTTON IMAGE
+            $div.find('#imgDelete').click(function () {
+                $('#' + ctrId).remove();
+            });
+
+            // Send Button event
+            $div.find("#btnSendMessage").click(function () {
+
+                $textBox = $div.find("#txtPrivateMessage");
+                var msg = $textBox.val();
+                if (msg.length > 0) {
+
+                    chatHub.server.sendPrivateMessage(userId, msg);
+                    $textBox.val('');
+                }
+            });
+
+            // Text Box event
+            $div.find("#txtPrivateMessage").keypress(function (e) {
+                if (e.which == 13) {
+                    $div.find("#btnSendMessage").click();
+                }
+            });
+
+            AddDivToContainer($div);
+
+        }
+
+        function AddDivToContainer($div) {
+            $('#divContainer').prepend($div);
+
+            $div.draggable({
+
+                handle: ".header",
+                stop: function () {
+
+                }
+            });
+
+            ////$div.resizable({
+            ////    stop: function () {
+
+            ////    }
+            ////});
+
+        }
+        $(".chat").hide();
+        $(".minimum").hide();
+        $("#btnshowchat").click(function () {
+            $("#idchat").toggle("200");
+            
+            //$(".chat").addClass("chat2");
+            $("#idchat").removeClass("Chatremove");
+            $(".chatcontent").fadeIn();
+        });
+        $("#closechat").click(function () {
+            $(".chatcontent").fadeOut();
+            $(".chat").addClass("Chatremove");
+        })
+        $("#minimum").click(function () {
+            $(".chat").fadeToggle("200");
+            $(".minimum").fadeToggle("200");
+        });
+        $("#closechatmini").click(function () {
+            $(".minimum").fadeToggle("200");
+        });
+        $("#minimummini").click(function () {
+            $(".chat").fadeToggle("200");
+            $(".minimum").fadeToggle("200");
+        });
+    </script>
+
+    <script type="text/javascript">
+        var num = 150; //vị trí mà khi scroll chuột đến sẽ bắt đầu sự kiện
+        $(window).bind('scroll', function () {
+            if ($(window).scrollTop() > num) {
+                $('#Menu').addClass('fixed-menu');
+            }
+            else {
+                $('#Menu').removeClass('fixed-menu');
+            }
+        });
+    </script>
+   <%-- <script src="js/jquery-latest.js" type="text/javascript"></script>
+    <script src="js/jcarousellite_1.js" type="text/javascript"></script>
+
+     --%>
+</body>
+</html>

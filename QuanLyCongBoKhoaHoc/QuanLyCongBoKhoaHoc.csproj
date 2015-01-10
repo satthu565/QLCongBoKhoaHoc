@@ -1,0 +1,2062 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C013CFD8-AF98-4D78-8087-996A401F8676}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyCongBoKhoaHoc</RootNamespace>
+    <AssemblyName>QuanLyCongBoKhoaHoc</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="ConnectionString-Deployment" Order="1" xmlns="">
+          <Destination Path="workstation id=quanlicongtrinhkhoahoc.mssql.somee.com%3bpacket size=4096%3buser id=satthutit_SQLLogin_1%3bpwd=4w2o12qp3o%3bdata source=quanlicongtrinhkhoahoc.mssql.somee.com%3bpersist security info=False%3binitial catalog=quanlicongtrinhkhoahoc" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=mst%3bInitial Catalog=QuanLyCongBoKhoaHoc%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Release\AutoScripts\ConnectionString-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
+    <DeployEncryptKey>Encryption password is used only if any deployment setting is marked as secure</DeployEncryptKey>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Microsoft.AspNet.SignalR.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.aspx" />
+    <Content Include="Admin\AdHome.aspx" />
+    <Content Include="Admin\AdUserControl\AdUcBaiBaoKhoaHoc.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcBaiBaoKhoaHoc_Sua.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcBaiBaoKhoaHoc_Them.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcCapDeTai.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcChiTietTinNhanLienHe.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcChucVu.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcCongBoKhoaHoc.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcCongBoKhoaHoc_Sua.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcDanhMucQuyen.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcGiaiThuongKhoaHoc.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcHocVi.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcKhenThuong.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcKhoa.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcMenu.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcNghienCuuSinh.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcQuanLyGiangVien.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcQuanLyQuyen.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcQuanLySlide.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcQuanLySuaTinTuc.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcQuanLyTinNhanLienHe.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcQuanLyTinTuc.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcQuaTrinhCongTac_Them.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcSachXuatBan.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcQuaTrinhCongTac.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcTaiKhoan.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcThongTinCaNhan.ascx" />
+    <Content Include="Admin\AdUserControl\AdUcVietTin.ascx" />
+    <Content Include="Admin\AdUserControl\ucAdHocVienCaoHoc.ascx" />
+    <Content Include="Admin\Default1.aspx" />
+    <Content Include="Admin\guimail.aspx" />
+    <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\Send.aspx" />
+    <Content Include="Admin\TinyFileManager.NET\bin\TinyFileManager.dll" />
+    <Content Include="Admin\TinyFileManager.NET\bin\TinyFileManager.pdb" />
+    <Content Include="Admin\TinyFileManager.NET\css\basic.css" />
+    <Content Include="Admin\TinyFileManager.NET\css\bootstrap-lightbox.min.css" />
+    <Content Include="Admin\TinyFileManager.NET\css\bootstrap.min.css" />
+    <Content Include="Admin\TinyFileManager.NET\css\dropzone.css" />
+    <Content Include="Admin\TinyFileManager.NET\css\style.css" />
+    <Content Include="Admin\TinyFileManager.NET\dialog.aspx" />
+    <Content Include="Admin\TinyFileManager.NET\img\fabric_plaid.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\glyphicons-halflings-white.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\glyphicons-halflings.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\AC3.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\ACE.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\ADE.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\ADP.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\AI.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\AIFF.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\AU.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\AVI.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\BAT.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\BIN.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\BMP.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\BUP.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\CAB.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\CAT.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\CHM.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\CSS.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\CSV.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\CUE.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\DAT.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\DCR.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\Default.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\Default2.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\DER.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\DIC.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\DIVX.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\DIZ.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\DLL.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\DOC.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\DOCX.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\DOS.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\DVD.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\DWG.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\DWT.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\EMF.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\EXC.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\EXE.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\FLA.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\folder.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\folder_return.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\FON.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\GIF.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\HLP.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\HTM.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\HTML.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\IFO.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\INF.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\INI.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\INS.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\IP.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\ISO.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\ISP.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\JAVA.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\JFIF.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\JPEG.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\JPG.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\JS.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\LOG.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\M4A.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\MID.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\MMF.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\MMM.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\MOV.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\MOVIE.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\MP2.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\MP2V.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\MP3.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\MP4.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\MPE.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\MPEG.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\MPG.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\MPV2.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\NFO.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\PDD.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\PDF.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\PHP.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\PNG.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\PPT.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\PPTX.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\PSD.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\RAR.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\REG.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\RTF.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\SCP.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\SQL.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\THEME.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\TIF.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\TIFF.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\TLB.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\TTF.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\TXT.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\UIS.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\URL.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\VBS.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\VCR.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\VOB.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\WAV.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\WBA.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\WMA.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\WMV.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\WPL.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\WRI.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\WTX.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\XLS.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\XLSX.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\XML.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\XSL.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\ZAP.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\ico\ZIP.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\loading.gif" />
+    <Content Include="Admin\TinyFileManager.NET\img\processing.gif" />
+    <Content Include="Admin\TinyFileManager.NET\img\spritemap%402x.png" />
+    <Content Include="Admin\TinyFileManager.NET\img\spritemap.png" />
+    <Content Include="Admin\TinyFileManager.NET\js\bootstrap-lightbox.min.js" />
+    <Content Include="Admin\TinyFileManager.NET\js\bootstrap.min.js" />
+    <Content Include="Admin\TinyFileManager.NET\js\dropzone.min.js" />
+    <Content Include="Admin\TinyFileManager.NET\js\include.js" />
+    <Content Include="Admin\TinyFileManager.NET\js\jquery.1.9.1.min.js" />
+    <Content Include="Admin\TinyFileManager.NET\resources\files\logo.jpg" />
+    <Content Include="Admin\TinyFileManager.NET\resources\files\main_img.png" />
+    <Content Include="Admin\TinyFileManager.NET\resources\files\Temp\photo_calc_logo.jpg" />
+    <Content Include="Admin\TinyFileManager.NET\resources\thumbs\logo.jpg" />
+    <Content Include="Admin\TinyFileManager.NET\resources\thumbs\main_img.png" />
+    <Content Include="Admin\TinyFileManager.NET\resources\thumbs\Temp\photo_calc_logo.jpg" />
+    <Content Include="Admin\WebForm1.aspx" />
+    <Content Include="Admin\WebForm2.aspx" />
+    <Content Include="Admin\WebForm3.aspx" />
+    <Content Include="banerepu.png" />
+    <Content Include="ChiTiet.aspx" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\ChatStyle.css" />
+    <Content Include="css\demo.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\JQueryUI\bootstrap.min.js" />
+    <Content Include="css\JQueryUI\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\JQueryUI\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\JQueryUI\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\JQueryUI\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\JQueryUI\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\JQueryUI\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\JQueryUI\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\JQueryUI\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\JQueryUI\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\JQueryUI\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\JQueryUI\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\JQueryUI\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\JQueryUI\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\JQueryUI\themes\base\jquery-ui.css" />
+    <Content Include="css\JQueryUI\themes\base\jquery.ui.accordion.css" />
+    <Content Include="css\JQueryUI\themes\base\jquery.ui.all.css" />
+    <Content Include="css\JQueryUI\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="css\JQueryUI\themes\base\jquery.ui.base.css" />
+    <Content Include="css\JQueryUI\themes\base\jquery.ui.button.css" />
+    <Content Include="css\JQueryUI\themes\base\jquery.ui.core.css" />
+    <Content Include="css\JQueryUI\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="css\JQueryUI\themes\base\jquery.ui.dialog.css" />
+    <Content Include="css\JQueryUI\themes\base\jquery.ui.menu.css" />
+    <Content Include="css\JQueryUI\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="css\JQueryUI\themes\base\jquery.ui.resizable.css" />
+    <Content Include="css\JQueryUI\themes\base\jquery.ui.selectable.css" />
+    <Content Include="css\JQueryUI\themes\base\jquery.ui.slider.css" />
+    <Content Include="css\JQueryUI\themes\base\jquery.ui.spinner.css" />
+    <Content Include="css\JQueryUI\themes\base\jquery.ui.tabs.css" />
+    <Content Include="css\JQueryUI\themes\base\jquery.ui.theme.css" />
+    <Content Include="css\JQueryUI\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="css\JQueryUI\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\JQueryUI\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\JQueryUI\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\JQueryUI\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\JQueryUI\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\JQueryUI\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\JQueryUI\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\JQueryUI\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\JQueryUI\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\JQueryUI\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\JQueryUI\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\JQueryUI\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\JQueryUI\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\JQueryUI\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="css\JQueryUI\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="css\JQueryUI\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="css\JQueryUI\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="css\JQueryUI\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="css\JQueryUI\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="css\JQueryUI\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="css\JQueryUI\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="css\JQueryUI\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="css\JQueryUI\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="css\JQueryUI\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="css\JQueryUI\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="css\JQueryUI\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="css\JQueryUI\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="css\JQueryUI\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="css\JQueryUI\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery-ui.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery.ui.accordion.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery.ui.all.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery.ui.autocomplete.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery.ui.base.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery.ui.button.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery.ui.core.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery.ui.datepicker.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery.ui.dialog.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery.ui.menu.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery.ui.progressbar.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery.ui.resizable.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery.ui.selectable.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery.ui.slider.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery.ui.spinner.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery.ui.tabs.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery.ui.theme.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\jquery.ui.tooltip.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\jquery-ui.min.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\jquery.ui.accordion.min.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\jquery.ui.button.min.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\jquery.ui.core.min.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\jquery.ui.dialog.min.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\jquery.ui.menu.min.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\jquery.ui.resizable.min.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\jquery.ui.selectable.min.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\jquery.ui.slider.min.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\jquery.ui.spinner.min.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\jquery.ui.tabs.min.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\jquery.ui.theme.min.css" />
+    <Content Include="css\JQueryUI\themes\ui-lightness\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="css\maruti-login.css" />
+    <Content Include="css\mst-style.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\style1.css" />
+    <Content Include="css\style2.css" />
+    <Content Include="css\styleAdmin.css" />
+    <Content Include="css\uploadify.css" />
+    <Content Include="CVGiangVien.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="flaty\assets\bootstrap-colorpicker\css\colorpicker.css" />
+    <Content Include="flaty\assets\bootstrap-colorpicker\img\alpha.png" />
+    <Content Include="flaty\assets\bootstrap-colorpicker\img\hue.png" />
+    <Content Include="flaty\assets\bootstrap-colorpicker\img\saturation.png" />
+    <Content Include="flaty\assets\bootstrap-colorpicker\js\bootstrap-colorpicker.js" />
+    <Content Include="flaty\assets\bootstrap-datepicker\css\datepicker.css" />
+    <Content Include="flaty\assets\bootstrap-datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="flaty\assets\bootstrap-daterangepicker\date.js" />
+    <Content Include="flaty\assets\bootstrap-daterangepicker\daterangepicker.css" />
+    <Content Include="flaty\assets\bootstrap-daterangepicker\daterangepicker.js" />
+    <Content Include="flaty\assets\bootstrap-duallistbox\bootstrap-duallistbox\bootstrap-duallistbox.html" />
+    <Content Include="flaty\assets\bootstrap-duallistbox\bootstrap-duallistbox\jquery.bootstrap-duallistbox.html" />
+    <Content Include="flaty\assets\bootstrap-duallistbox\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="flaty\assets\bootstrap-duallistbox\bootstrap\css\bootstrap.css" />
+    <Content Include="flaty\assets\bootstrap-duallistbox\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="flaty\assets\bootstrap-duallistbox\duallistbox\bootstrap-duallistbox.css" />
+    <Content Include="flaty\assets\bootstrap-duallistbox\duallistbox\bootstrap-duallistbox.js" />
+    <Content Include="flaty\assets\bootstrap-duallistbox\index.html" />
+    <Content Include="flaty\assets\bootstrap-duallistbox\libraries\jquery-1.9.0.min.js" />
+    <Content Include="flaty\assets\bootstrap-duallistbox\libraries\jquery-placeholder\jquery.placeholder.js" />
+    <Content Include="flaty\assets\bootstrap-duallistbox\libraries\modernizr\modernizr-custom.min.js" />
+    <Content Include="flaty\assets\bootstrap-duallistbox\libraries\prettify\prettify.css" />
+    <Content Include="flaty\assets\bootstrap-duallistbox\libraries\prettify\prettify.js" />
+    <Content Include="flaty\assets\bootstrap-fileupload\bootstrap-fileupload.css" />
+    <Content Include="flaty\assets\bootstrap-fileupload\bootstrap-fileupload.min.js" />
+    <Content Include="flaty\assets\bootstrap-inputmask\bootstrap-inputmask.min.js" />
+    <Content Include="flaty\assets\bootstrap-switch\static\js\bootstrap-switch.js" />
+    <Content Include="flaty\assets\bootstrap-switch\static\stylesheets\bootstrap-switch.css" />
+    <Content Include="flaty\assets\bootstrap-timepicker\compiled\timepicker.css" />
+    <Content Include="flaty\assets\bootstrap-timepicker\js\bootstrap-timepicker.js" />
+    <Content Include="flaty\assets\bootstrap-wizard\jquery.bootstrap.wizard.js" />
+    <Content Include="flaty\assets\bootstrap-wysihtml5\bootstrap-wysihtml5.css" />
+    <Content Include="flaty\assets\bootstrap-wysihtml5\bootstrap-wysihtml5.js" />
+    <Content Include="flaty\assets\bootstrap-wysihtml5\wysihtml5-0.3.0.js" />
+    <Content Include="flaty\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="flaty\assets\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="flaty\assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="flaty\assets\chosen-bootstrap\chosen-sprite%402x.png" />
+    <Content Include="flaty\assets\chosen-bootstrap\chosen-sprite.png" />
+    <Content Include="flaty\assets\chosen-bootstrap\chosen.jquery.min.js" />
+    <Content Include="flaty\assets\chosen-bootstrap\chosen.min.css" />
+    <Content Include="flaty\assets\ckeditor\ckeditor.js" />
+    <Content Include="flaty\assets\clockface\css\clockface.css" />
+    <Content Include="flaty\assets\clockface\js\clockface.js" />
+    <Content Include="flaty\assets\code-prettify\code-prettify.css" />
+    <Content Include="flaty\assets\code-prettify\code-prettify.js" />
+    <Content Include="flaty\assets\data-tables\bootstrap3\dataTables.bootstrap.css" />
+    <Content Include="flaty\assets\data-tables\bootstrap3\dataTables.bootstrap.js" />
+    <Content Include="flaty\assets\data-tables\images\sort_asc.png" />
+    <Content Include="flaty\assets\data-tables\images\sort_asc_disabled.html" />
+    <Content Include="flaty\assets\data-tables\images\sort_both.png" />
+    <Content Include="flaty\assets\data-tables\images\sort_desc.png" />
+    <Content Include="flaty\assets\data-tables\images\sort_desc_disabled.html" />
+    <Content Include="flaty\assets\data-tables\jquery.dataTables.js" />
+    <Content Include="flaty\assets\dropzone\downloads\css\dropzone.css" />
+    <Content Include="flaty\assets\dropzone\downloads\dropzone.min.js" />
+    <Content Include="flaty\assets\dropzone\downloads\images\spritemap%402x.png" />
+    <Content Include="flaty\assets\dropzone\downloads\images\spritemap.png" />
+    <Content Include="flaty\assets\flot\jquery.flot.crosshair.js" />
+    <Content Include="flaty\assets\flot\jquery.flot.js" />
+    <Content Include="flaty\assets\flot\jquery.flot.pie.js" />
+    <Content Include="flaty\assets\flot\jquery.flot.resize.js" />
+    <Content Include="flaty\assets\flot\jquery.flot.stack.js" />
+    <Content Include="flaty\assets\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="flaty\assets\font-awesome\css\font-awesome.min.css" />
+    <Content Include="flaty\assets\font-awesome\font\fontawesome-webfont.svg" />
+    <Content Include="flaty\assets\fullcalendar\fullcalendar\fullcalendar.css" />
+    <Content Include="flaty\assets\fullcalendar\fullcalendar\fullcalendar.min.js" />
+    <Content Include="flaty\assets\gmaps\gmaps.js" />
+    <Content Include="flaty\assets\gritter\css\jquery.gritter.css" />
+    <Content Include="flaty\assets\gritter\images\gritter-light.png" />
+    <Content Include="flaty\assets\gritter\images\gritter.png" />
+    <Content Include="flaty\assets\gritter\images\ie-spacer.gif" />
+    <Content Include="flaty\assets\gritter\js\jquery.gritter.js" />
+    <Content Include="flaty\assets\jquery-cookie\jquery.cookie.js" />
+    <Content Include="flaty\assets\jquery-knob\jquery.knob.js" />
+    <Content Include="flaty\assets\jquery-pwstrength\jquery.pwstrength.css" />
+    <Content Include="flaty\assets\jquery-pwstrength\jquery.pwstrength.min.js" />
+    <Content Include="flaty\assets\jquery-tags-input\jquery.tagsinput.css" />
+    <Content Include="flaty\assets\jquery-tags-input\jquery.tagsinput.min.js" />
+    <Content Include="flaty\assets\jquery-ui\jquery-ui.min.css" />
+    <Content Include="flaty\assets\jquery-ui\jquery-ui.min.js" />
+    <Content Include="flaty\assets\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="flaty\assets\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="flaty\assets\jquery\jquery-2.0.3.min.js" />
+    <Content Include="flaty\assets\jqvmap\jqvmap\data\jquery.vmap.sampledata.js" />
+    <Content Include="flaty\assets\jqvmap\jqvmap\jquery.vmap.min.js" />
+    <Content Include="flaty\assets\jqvmap\jqvmap\jqvmap.css" />
+    <Content Include="flaty\assets\jqvmap\jqvmap\maps\jquery.vmap.europe.js" />
+    <Content Include="flaty\assets\jqvmap\jqvmap\maps\jquery.vmap.germany.js" />
+    <Content Include="flaty\assets\jqvmap\jqvmap\maps\jquery.vmap.usa.js" />
+    <Content Include="flaty\assets\jqvmap\jqvmap\maps\jquery.vmap.world.js" />
+    <Content Include="flaty\assets\nicescroll\jquery.nicescroll.min.js" />
+    <Content Include="flaty\assets\prettyPhoto\css\prettyPhoto.css" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\default\loader.gif" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\default\sprite.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\facebook\default_img-thumbnail.html" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="flaty\assets\prettyPhoto\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="flaty\assets\prettyPhoto\js\jquery.prettyPhoto.js" />
+    <Content Include="flaty\assets\sparkline\jquery.sparkline.min.js" />
+    <Content Include="flaty\box.html" />
+    <Content Include="flaty\calendar.html" />
+    <Content Include="flaty\css\flaty-responsive.css" />
+    <Content Include="flaty\css\flaty.css" />
+    <Content Include="flaty\extra_invoice.html" />
+    <Content Include="flaty\extra_login.html" />
+    <Content Include="flaty\extra_mail-compose.html" />
+    <Content Include="flaty\extra_mail-list.html" />
+    <Content Include="flaty\extra_mail-msg.html" />
+    <Content Include="flaty\extra_profile.html" />
+    <Content Include="flaty\extra_search.html" />
+    <Content Include="flaty\form_component.html" />
+    <Content Include="flaty\form_layout.html" />
+    <Content Include="flaty\form_validation.html" />
+    <Content Include="flaty\form_wizard.html" />
+    <Content Include="flaty\gallery.html" />
+    <Content Include="flaty\grid.html" />
+    <Content Include="flaty\img\demo\80x80.gif" />
+    <Content Include="flaty\img\demo\avatar\avatar1.jpg" />
+    <Content Include="flaty\img\demo\avatar\avatar2.jpg" />
+    <Content Include="flaty\img\demo\avatar\avatar3.jpg" />
+    <Content Include="flaty\img\demo\avatar\avatar4.jpg" />
+    <Content Include="flaty\img\demo\avatar\avatar5.jpg" />
+    <Content Include="flaty\img\demo\gallery\1.jpg" />
+    <Content Include="flaty\img\demo\gallery\10.jpg" />
+    <Content Include="flaty\img\demo\gallery\10_thumb.jpg" />
+    <Content Include="flaty\img\demo\gallery\1_thumb.jpg" />
+    <Content Include="flaty\img\demo\gallery\2.jpg" />
+    <Content Include="flaty\img\demo\gallery\2_thumb.jpg" />
+    <Content Include="flaty\img\demo\gallery\3.jpg" />
+    <Content Include="flaty\img\demo\gallery\3_thumb.jpg" />
+    <Content Include="flaty\img\demo\gallery\4.jpg" />
+    <Content Include="flaty\img\demo\gallery\4_thumb.jpg" />
+    <Content Include="flaty\img\demo\gallery\5.jpg" />
+    <Content Include="flaty\img\demo\gallery\5_thumb.jpg" />
+    <Content Include="flaty\img\demo\gallery\6.jpg" />
+    <Content Include="flaty\img\demo\gallery\6_thumb.jpg" />
+    <Content Include="flaty\img\demo\gallery\7.jpg" />
+    <Content Include="flaty\img\demo\gallery\7_thumb.jpg" />
+    <Content Include="flaty\img\demo\gallery\8.jpg" />
+    <Content Include="flaty\img\demo\gallery\8_thumb.jpg" />
+    <Content Include="flaty\img\demo\gallery\9.jpg" />
+    <Content Include="flaty\img\demo\gallery\9_thumb.jpg" />
+    <Content Include="flaty\img\demo\profile-picture.jpg" />
+    <Content Include="flaty\img\demo\wp-logo.png" />
+    <Content Include="flaty\img\favicon.html" />
+    <Content Include="flaty\index-2.html" />
+    <Content Include="flaty\index-3.html" />
+    <Content Include="flaty\index.html" />
+    <Content Include="flaty\js\flaty-demo-codes.js" />
+    <Content Include="flaty\js\flaty.js" />
+    <Content Include="flaty\map_google.html" />
+    <Content Include="flaty\map_vector.html" />
+    <Content Include="flaty\more_blank.html" />
+    <Content Include="flaty\more_error-404.html" />
+    <Content Include="flaty\more_error-500.html" />
+    <Content Include="flaty\more_full-width.html" />
+    <Content Include="flaty\more_set-sidebar-navbar-color.html" />
+    <Content Include="flaty\more_set-skin.html" />
+    <Content Include="flaty\more_sidebar-collapsed.html" />
+    <Content Include="flaty\set-skin.html" />
+    <Content Include="flaty\table_advance.html" />
+    <Content Include="flaty\table_basic.html" />
+    <Content Include="flaty\table_dynamic.html" />
+    <Content Include="flaty\typography.html" />
+    <Content Include="flaty\ui_button.html" />
+    <Content Include="flaty\ui_chart.html" />
+    <Content Include="flaty\ui_general.html" />
+    <Content Include="flaty\ui_horizontal-menu.html" />
+    <Content Include="flaty\ui_icon.html" />
+    <Content Include="flaty\ui_message.html" />
+    <Content Include="flaty\ui_slider.html" />
+    <Content Include="flaty\ui_tile.html" />
+    <Content Include="flaty\ui_timeline.html" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="HienThiTimKiem.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\#U1ea3nh cu#U1edbi HQ.png" />
+    <Content Include="images\20140804223250666#U1ea3nh cu#U1edbi HQ.png" />
+    <Content Include="images\20140805101601985album-cuoi-dep-lavender-2014-2.JPG" />
+    <Content Include="images\20140805101618864anh-cuoi-lavender-dai-lai.jpg" />
+    <Content Include="images\20140805101632148chup-anh-cuoi-lavender-dep-tai-ha-noi-12321.jpg" />
+    <Content Include="images\20140805101930620phong-cach-chup-anh-cuoi-8.jpg" />
+    <Content Include="images\20140805102049563phong-cach-chup-anh-cuoi-8.jpg" />
+    <Content Include="images\20140805103211680anh-cuoi-lavender-dai-lai.jpg" />
+    <Content Include="images\20140805104656488vay cuoi.jpg" />
+    <Content Include="images\20140805104832000chup hinh be.jpg" />
+    <Content Include="images\20140805104955887caphe2.jpg" />
+    <Content Include="images\20140805105030601vay cuoi.jpg" />
+    <Content Include="images\20140813105848745deal-cam-nang-cuoi-anh-dai-dien.png" />
+    <Content Include="images\20140813105911816ảnh cưới HQ.png" />
+    <Content Include="images\20140813105934038sophia-tolli-5.jpg" />
+    <Content Include="images\20140813110004880anh-cuoi-nhi-nhanh-6.jpg" />
+    <Content Include="images\20140813131146807anh-cuoi-nhi-nhanh-6.jpg" />
+    <Content Include="images\20140813131209379.jpg" />
+    <Content Include="images\20140813133106694images8.jpg" />
+    <Content Include="images\20140813133149267.jpg" />
+    <Content Include="images\20140813140129951anh-cuoi-sao-hoa-ngu7.jpg" />
+    <Content Include="images\20140813140247550images1.jpg" />
+    <Content Include="images\20140813145229150.jpg" />
+    <Content Include="images\20140813145229258ảnh cưới HQ.png" />
+    <Content Include="images\20140813145229270anh-cuoi-nhi-nhanh-6.jpg" />
+    <Content Include="images\20140813145229279anh-cuoi-sao-hoa-ngu7.jpg" />
+    <Content Include="images\20140813145229288banner.jpg" />
+    <Content Include="images\20140813145229297deal-cam-nang-cuoi-anh-dai-dien.png" />
+    <Content Include="images\20140813145229303image3a.jpg" />
+    <Content Include="images\20140813145229309imageadds.jpg" />
+    <Content Include="images\20140813145229321images.jpg" />
+    <Content Include="images\20140813145229327images1.jpg" />
+    <Content Include="images\20140813145229336images2.jpg" />
+    <Content Include="images\20140813145229347images8.jpg" />
+    <Content Include="images\20140813145229389images9.jpg" />
+    <Content Include="images\20140813145229422images11.jpg" />
+    <Content Include="images\20140813145229431images12.jpg" />
+    <Content Include="images\20140813145229441images33.jpg" />
+    <Content Include="images\20140813145229446images790632DiepBaoNgocanhcuoi1jpg1348364313.jpg" />
+    <Content Include="images\20140813145229454imagesa.jpg" />
+    <Content Include="images\20140813145229466imagesư.jpg" />
+    <Content Include="images\20140813145229476IMG-0593-Hinh4-3173-1399883007.png" />
+    <Content Include="images\20140813145229483jen8-3f466.jpg" />
+    <Content Include="images\20140813145229491photo4a601d3fe4b31.png" />
+    <Content Include="images\20140813145229498sophia-tolli-5.jpg" />
+    <Content Include="images\20140813145229506váy đuôi cá.png" />
+    <Content Include="images\20140813145229517VietGiaiTri.Com-ca799af7.jpg" />
+    <Content Include="images\20140813145229527xu-huong-ao-cuoi-2014-6.jpg" />
+    <Content Include="images\20140814134332088images4.jpg" />
+    <Content Include="images\201408141614508494.jpg" />
+    <Content Include="images\201408141622199732.jpg" />
+    <Content Include="images\201408150929557833.jpg" />
+    <Content Include="images\201408150932577982a.jpg" />
+    <Content Include="images\201408150954492022.jpg" />
+    <Content Include="images\201408151004419883.jpg" />
+    <Content Include="images\201408151011108822a.jpg" />
+    <Content Include="images\201408151017366804.jpg" />
+    <Content Include="images\20140815101833933g.jpg" />
+    <Content Include="images\201408151027152363a - Copy.jpg" />
+    <Content Include="images\201408151047330623.jpg" />
+    <Content Include="images\201408151049259592a.jpg" />
+    <Content Include="images\201408151049486563.jpg" />
+    <Content Include="images\201408151050440813a - Copy.jpg" />
+    <Content Include="images\201408151056394263.jpg" />
+    <Content Include="images\20140815131817929images7.jpg" />
+    <Content Include="images\201408161136343632.jpg" />
+    <Content Include="images\201408161506417439.jpg" />
+    <Content Include="images\20140818082424640images6.jpg" />
+    <Content Include="images\20140819084958369images790632DiepBaoNgocanhcuoi1jpg1348364313.jpg" />
+    <Content Include="images\20140819085105067váy đuôi cá.png" />
+    <Content Include="images\AnhGiangVien\20141015094454810images %286%29.jpg" />
+    <Content Include="images\AnhGiangVien\images %281%29.jpg" />
+    <Content Include="images\AnhGiangVien\images %2810%29.jpg" />
+    <Content Include="images\AnhGiangVien\images %2811%29.jpg" />
+    <Content Include="images\AnhGiangVien\images %2812%29.jpg" />
+    <Content Include="images\AnhGiangVien\images %2813%29.jpg" />
+    <Content Include="images\AnhGiangVien\images %2814%29.jpg" />
+    <Content Include="images\AnhGiangVien\images %282%29.jpg" />
+    <Content Include="images\AnhGiangVien\images %283%29.jpg" />
+    <Content Include="images\AnhGiangVien\images %284%29.jpg" />
+    <Content Include="images\AnhGiangVien\images %285%29.jpg" />
+    <Content Include="images\AnhGiangVien\images %286%29.jpg" />
+    <Content Include="images\AnhGiangVien\images %287%29.jpg" />
+    <Content Include="images\AnhGiangVien\images %288%29.jpg" />
+    <Content Include="images\AnhGiangVien\images %289%29.jpg" />
+    <Content Include="images\AnhGiangVien\tải xuống %281%29.jpg" />
+    <Content Include="images\AnhGiangVien\tải xuống %282%29.jpg" />
+    <Content Include="images\banner.png" />
+    <Content Include="images\BANNER.swf" />
+    <Content Include="images\banner1.jpg" />
+    <Content Include="images\beige_paper.png" />
+    <Content Include="images\body_topleft_bg.jpg" />
+    <Content Include="images\default.png" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\depositphotos_9706354-Vector-pink-and-white-pattern-seamless-background.jpg" />
+    <Content Include="images\iconchat.png" />
+    <Content Include="images\IpadQuatrefoilLightRoseWhite.jpg" />
+    <Content Include="images\LOGO.jpg" />
+    <Content Include="images\pattern05.png" />
+    <Content Include="images\right_arrow.png" />
+    <Content Include="images\star-1-1.png" />
+    <Content Include="images\star-2-2.png" />
+    <Content Include="images\TinTuc\201408151004419883.jpg" />
+    <Content Include="images\TinTuc\201408161506417439.jpg" />
+    <Content Include="images\TinTuc\20140920094617397admin.jpg" />
+    <Content Include="images\TinTuc\2014092011015369710156979_553008151480594_622475165_n.jpg" />
+    <Content Include="images\TinTuc\20141004145455979Hotro2.png" />
+    <Content Include="images\TinTuc\20141005233631976hotlinechung.png" />
+    <Content Include="images\TinTuc\20141005233733642Hotro1.png" />
+    <Content Include="images\Wedding-Love-Vector-Background-300x212.jpg" />
+    <Content Include="img\add.png" />
+    <Content Include="img\background.jpg" />
+    <Content Include="img\beaking1.png" />
+    <Content Include="img\beaking2.png" />
+    <Content Include="img\bg-menu.png" />
+    <Content Include="img\client-img.png" />
+    <Content Include="img\client-img2.png" />
+    <Content Include="img\delete.jpg" />
+    <Content Include="img\detail.jpg" />
+    <Content Include="img\dowload.jpg" />
+    <Content Include="img\edit.jpg" />
+    <Content Include="img\files.png" />
+    <Content Include="img\home.jpg" />
+    <Content Include="img\Hotro1.png" />
+    <Content Include="img\Hotro2.png" />
+    <Content Include="img\icon-default.png" />
+    <Content Include="img\images %281%29.jpg" />
+    <Content Include="img\images %282%29.jpg" />
+    <Content Include="index.html" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jcarousellite_1.js" />
+    <Content Include="js\jquery2.js" />
+    <Content Include="js\jquery-1.11.1.min.js" />
+    <Content Include="js\jquery-1.8.3.min.js" />
+    <Content Include="js\jquery-latest.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.MultiFile.pack.js" />
+    <Content Include="js\jquery.uploadify.js" />
+    <Content Include="js\jquery.uploadify.min.js" />
+    <Content Include="js\MST-js.js" />
+    <Content Include="js\breaking-new.js" />
+    <Content Include="js\tinymce\jquery.tinymce.min.js" />
+    <Content Include="js\tinymce\langs\vi_VN.js" />
+    <Content Include="js\tinymce\license.txt" />
+    <Content Include="js\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="js\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\example\dialog.html" />
+    <Content Include="js\tinymce\plugins\example\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\example_dependency\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\filemanager\css\basic.css" />
+    <Content Include="js\tinymce\plugins\filemanager\css\bootstrap-lightbox.min.css" />
+    <Content Include="js\tinymce\plugins\filemanager\css\bootstrap.min.css" />
+    <Content Include="js\tinymce\plugins\filemanager\css\dropzone.css" />
+    <Content Include="js\tinymce\plugins\filemanager\css\style.css" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\AC3.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\ACE.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\ADE.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\ADP.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\AI.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\AIFF.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\AU.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\AVI.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\BAT.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\BIN.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\BMP.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\BUP.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\CAB.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\CAT.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\CHM.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\CSS.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\CSV.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\CUE.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\DAT.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\DCR.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\Default.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\Default2.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\DER.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\DIC.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\DIVX.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\DIZ.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\DLL.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\DOC.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\DOCX.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\DOS.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\DVD.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\DWG.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\DWT.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\EMF.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\EXC.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\EXE.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\FLA.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\folder.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\folder_return.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\FON.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\GIF.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\HLP.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\HTM.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\HTML.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\IFO.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\INF.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\INI.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\INS.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\IP.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\ISO.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\ISP.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\JAVA.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\JFIF.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\JPEG.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\JPG.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\JS.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\LOG.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\M4A.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\MID.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\MMF.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\MMM.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\MOV.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\MOVIE.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\MP2.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\MP2V.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\MP3.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\MP4.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\MPE.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\MPEG.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\MPG.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\MPV2.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\NFO.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\PDD.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\PDF.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\PHP.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\PNG.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\PPT.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\PPTX.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\PSD.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\RAR.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\REG.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\RTF.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\SCP.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\SQL.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\THEME.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\TIF.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\TIFF.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\TLB.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\TTF.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\TXT.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\UIS.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\URL.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\VBS.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\VCR.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\VOB.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\WAV.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\WBA.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\WMA.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\WMV.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\WPL.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\WRI.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\WTX.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\XLS.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\XLSX.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\XML.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\XSL.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\ZAP.png" />
+    <Content Include="js\tinymce\plugins\filemanager\ico\ZIP.png" />
+    <Content Include="js\tinymce\plugins\filemanager\images\fabric_plaid.jpg" />
+    <Content Include="js\tinymce\plugins\filemanager\images\spritemap%402x.png" />
+    <Content Include="js\tinymce\plugins\filemanager\images\spritemap%402x_hu_HU.png" />
+    <Content Include="js\tinymce\plugins\filemanager\images\spritemap.png" />
+    <Content Include="js\tinymce\plugins\filemanager\images\spritemap_hu_HU.png" />
+    <Content Include="js\tinymce\plugins\filemanager\img\glyphicons-halflings-white.png" />
+    <Content Include="js\tinymce\plugins\filemanager\img\glyphicons-halflings.png" />
+    <Content Include="js\tinymce\plugins\filemanager\img\loading.gif" />
+    <Content Include="js\tinymce\plugins\filemanager\img\processing.gif" />
+    <Content Include="js\tinymce\plugins\filemanager\img\storing_animation.gif" />
+    <Content Include="js\tinymce\plugins\filemanager\js\bootstrap-lightbox.min.js" />
+    <Content Include="js\tinymce\plugins\filemanager\js\bootstrap.min.js" />
+    <Content Include="js\tinymce\plugins\filemanager\js\dropzone.min.js" />
+    <Content Include="js\tinymce\plugins\filemanager\js\include.js" />
+    <Content Include="js\tinymce\plugins\filemanager\js\jquery.1.9.1.min.js" />
+    <Content Include="js\tinymce\plugins\filemanager\js\jquery.touchSwipe.min.js" />
+    <Content Include="js\tinymce\plugins\filemanager\js\modernizr.custom.js" />
+    <Content Include="js\tinymce\plugins\filemanager\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\fileman\css\images\animated-overlay.gif" />
+    <Content Include="js\tinymce\plugins\fileman\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="js\tinymce\plugins\fileman\css\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="js\tinymce\plugins\fileman\css\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="js\tinymce\plugins\fileman\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="js\tinymce\plugins\fileman\css\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="js\tinymce\plugins\fileman\css\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="js\tinymce\plugins\fileman\css\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="js\tinymce\plugins\fileman\css\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="js\tinymce\plugins\fileman\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="js\tinymce\plugins\fileman\css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="js\tinymce\plugins\fileman\css\images\ui-icons_454545_256x240.png" />
+    <Content Include="js\tinymce\plugins\fileman\css\images\ui-icons_888888_256x240.png" />
+    <Content Include="js\tinymce\plugins\fileman\css\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="js\tinymce\plugins\fileman\css\jquery-ui-1.10.4.custom.css" />
+    <Content Include="js\tinymce\plugins\fileman\css\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="js\tinymce\plugins\fileman\css\main.css" />
+    <Content Include="js\tinymce\plugins\fileman\css\main.min.css" />
+    <Content Include="js\tinymce\plugins\fileman\dev.html" />
+    <Content Include="js\tinymce\plugins\fileman\images\action-folder-paste.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\action-folder-rename.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\arrow_down.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\arrow_up.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\blank.gif" />
+    <Content Include="js\tinymce\plugins\fileman\images\copy.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\cut.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\dir-minus.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\dir-plus.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\file-add.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\file-delete.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\file-download.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\file-duplicate.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\file-upload.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_3gp.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_7z.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_ace.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_ai.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_aif.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_aiff.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_amr.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_asf.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_asx.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_bat.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_bin.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_bmp.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_bup.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_cab.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_cbr.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_cda.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_cdl.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_cdr.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_chm.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_dat.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_divx.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_dll.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_dmg.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_doc.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_dss.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_dvf.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_dwg.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_eml.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_eps.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_exe.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_fla.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_flv.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_gif.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_gz.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_hqx.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_htm.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_html.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_ifo.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_indd.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_iso.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_jar.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_jpeg.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_jpg.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_lnk.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_log.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_m4a.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_m4b.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_m4p.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_m4v.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_mcd.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_mdb.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_mid.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_mov.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_mp2.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_mp4.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_mpeg.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_mpg.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_msi.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_mswmm.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_ogg.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_pdf.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_png.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_pps.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_ps.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_psd.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_pst.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_ptb.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_pub.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_qbb.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_qbw.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_qxd.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_ram.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_rar.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_rm.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_rmvb.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_rtf.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_sea.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_ses.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_sit.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_sitx.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_ss.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_swf.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_tgz.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_thm.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_tif.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_tmp.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_torrent.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_ttf.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_txt.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_vcd.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_vob.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_wav.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_wma.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_wmv.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_wps.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_xls.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_xpi.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\file_extension_zip.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\big\unknown.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_3gp.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_7z.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_ace.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_ai.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_aif.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_aiff.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_amr.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_asf.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_asx.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_bat.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_bin.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_bmp.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_bup.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_cab.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_cbr.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_cda.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_cdl.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_cdr.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_chm.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_dat.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_divx.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_dll.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_dmg.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_doc.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_dss.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_dvf.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_dwg.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_eml.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_eps.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_exe.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_fla.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_flv.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_gif.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_gz.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_hqx.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_htm.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_html.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_ifo.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_indd.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_iso.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_jar.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_jpeg.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_jpg.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_lnk.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_log.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_m4a.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_m4b.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_m4p.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_m4v.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_mcd.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_mdb.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_mid.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_mov.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_mp2.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_mp4.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_mpeg.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_mpg.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_msi.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_mswmm.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_ogg.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_pdf.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_png.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_pps.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_ps.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_psd.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_pst.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_ptb.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_pub.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_qbb.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_qbw.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_qxd.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_ram.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_rar.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_rm.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_rmvb.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_rtf.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_sea.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_ses.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_sit.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_sitx.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_ss.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_swf.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_tgz.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_thm.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_tif.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_tmp.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_torrent.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_ttf.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_txt.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_vcd.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_vob.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_wav.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_wma.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_wmv.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_wps.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_xls.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_xpi.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\file_extension_zip.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\filetypes\unknown.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\find.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\folder-add.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\folder-delete.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\folder-download.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\folder-green.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\folder-opened.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\folder.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\loading-dir.gif" />
+    <Content Include="js\tinymce\plugins\fileman\images\loading.gif" />
+    <Content Include="js\tinymce\plugins\fileman\images\paste.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\preview.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\rename.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\search.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\select.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\upload-big.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\view-list.png" />
+    <Content Include="js\tinymce\plugins\fileman\images\view-tile.png" />
+    <Content Include="js\tinymce\plugins\fileman\index.html" />
+    <Content Include="js\tinymce\plugins\fileman\js\custom.js" />
+    <Content Include="js\tinymce\plugins\fileman\js\directory.js" />
+    <Content Include="js\tinymce\plugins\fileman\js\file.js" />
+    <Content Include="js\tinymce\plugins\fileman\js\filetypes.js" />
+    <Content Include="js\tinymce\plugins\fileman\js\jquery-1.10.2.min.js" />
+    <Content Include="js\tinymce\plugins\fileman\js\jquery-dateFormat.min.js" />
+    <Content Include="js\tinymce\plugins\fileman\js\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="js\tinymce\plugins\fileman\js\main.js" />
+    <Content Include="js\tinymce\plugins\fileman\js\main.min.js" />
+    <Content Include="js\tinymce\plugins\fileman\js\mini-main.js" />
+    <Content Include="js\tinymce\plugins\fileman\js\tiny_mce_popup.js" />
+    <Content Include="js\tinymce\plugins\fileman\js\utils.js" />
+    <Content Include="js\tinymce\plugins\fileman\LICENSE.txt" />
+    <Content Include="js\tinymce\plugins\fileman\Uploads\Images\DSC_2987.jpg" />
+    <Content Include="js\tinymce\plugins\fileman\Uploads\LICENSE.txt" />
+    <Content Include="js\tinymce\plugins\fileman\Uploads\roxy-fileman-logo.gif" />
+    <Content Include="js\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\layer\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\media\moxieplayer.swf" />
+    <Content Include="js\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\tinyfilemanager.net\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="js\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="js\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="js\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="js\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce-small.dev.svg" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce.dev.svg" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="js\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="js\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="js\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="js\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="js\tinymce\skins\lightgray\skin.ie7.min.css" />
+    <Content Include="js\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="js\tinymce\themes\modern\theme.min.js" />
+    <Content Include="js\tinymce\tinymce.min.js" />
+    <Content Include="js\xuly.js" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="js\breaking.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Lib\Microsoft.AspNet.SignalR.Core.dll" />
+    <Content Include="Lib\Microsoft.AspNet.SignalR.Core.xml" />
+    <Content Include="Lib\Microsoft.AspNet.SignalR.Owin.dll" />
+    <Content Include="Lib\Microsoft.AspNet.SignalR.Owin.xml" />
+    <Content Include="Lib\Microsoft.AspNet.SignalR.SystemWeb.dll" />
+    <Content Include="Lib\Microsoft.AspNet.SignalR.SystemWeb.xml" />
+    <Content Include="Lib\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="Lib\Microsoft.Owin.Host.SystemWeb.xml" />
+    <Content Include="Lib\Owin.dll" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery.signalR-1.0.0.js" />
+    <Content Include="Scripts\jquery.signalR-1.0.0.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.0.2.js" />
+    <Content Include="Scripts\jquery.signalR-2.0.2.min.js" />
+    <Content Include="Scripts\ui\jquery.ui.core.js" />
+    <Content Include="Scripts\ui\jquery.ui.dialog.js" />
+    <Content Include="Scripts\ui\jquery.ui.draggable.js" />
+    <Content Include="Scripts\ui\jquery.ui.mouse.js" />
+    <Content Include="Scripts\ui\jquery.ui.resizable.js" />
+    <Content Include="Scripts\ui\jquery.ui.widget.js" />
+    <Content Include="UserControl\Banner.ascx" />
+    <Content Include="UserControl\chat.ascx" />
+    <Content Include="UserControl\Footer.ascx" />
+    <Content Include="UserControl\LyLichKhoaHoc.ascx" />
+    <Content Include="UserControl\MenuDoc.ascx" />
+    <Content Include="UserControl\MenuNgang.ascx" />
+    <Content Include="UserControl\Slides.ascx" />
+    <Content Include="UserControl\TinMoi.ascx" />
+    <Content Include="UserControl\UcBaiBaoKhoaHoc.ascx" />
+    <Content Include="UserControl\UcBreakingNews.ascx" />
+    <Content Include="UserControl\UcChiTietTinTuc.ascx" />
+    <Content Include="UserControl\UcDangKyChonGiangVien.ascx" />
+    <Content Include="UserControl\UcDeTaiCongTrinhKhoaHoc.ascx" />
+    <Content Include="UserControl\UcGiaiThuongKhoaHoc.ascx" />
+    <Content Include="UserControl\UcHienThiTimKiemGiangVien.ascx" />
+    <Content Include="UserControl\UcHome.ascx" />
+    <Content Include="UserControl\UcHoTroLienHe.ascx" />
+    <Content Include="UserControl\UcHuongDanSauDaiHoc.ascx" />
+    <Content Include="UserControl\UcKhenThuong.ascx" />
+    <Content Include="UserControl\UcLietKeBaiBaoKhoaHoc.ascx" />
+    <Content Include="UserControl\UcLietKeCongTrinhKhoaHoc.ascx" />
+    <Content Include="UserControl\UcLietKeSachGiaoTrinh.ascx" />
+    <Content Include="UserControl\UcMonGiangDay.ascx" />
+    <Content Include="UserControl\UcQuaTrinhGiangDayVaCongTac.ascx" />
+    <Content Include="UserControl\UcSachVaGiaoTrinh.ascx" />
+    <Content Include="UserControl\UcThongKeBaiBaoKhoaHoc.ascx" />
+    <Content Include="UserControl\UcThongKeCongTrinhKhoaHoc.ascx" />
+    <Content Include="UserControl\UcThongKeHocVi.ascx" />
+    <Content Include="UserControl\UcThongKeSachGiaoTrinh.ascx" />
+    <Content Include="UserControl\UcThongTinChungGiangVien.ascx" />
+    <Content Include="UserControl\UcTimKiemBaiBaoKhoaHoc.ascx" />
+    <Content Include="UserControl\UcTimKiemCongBoKhoaHoc.ascx" />
+    <Content Include="UserControl\UcTimKiemGiangVien.ascx" />
+    <Content Include="UserControl\UcTimKiemSachXuatBan.ascx" />
+    <Content Include="UserControl\ucTinNhanh.ascx" />
+    <Content Include="UserControl\UcTinTuc.ascx" />
+    <Content Include="UserControl\UcTopHeader.ascx" />
+    <Content Include="UserControl\UcYKienTraoDoi.ascx" />
+    <Content Include="UserControl\WebUserControl1.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdHome.aspx.cs">
+      <DependentUpon>AdHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdHome.aspx.designer.cs">
+      <DependentUpon>AdHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcBaiBaoKhoaHoc.ascx.cs">
+      <DependentUpon>AdUcBaiBaoKhoaHoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcBaiBaoKhoaHoc.ascx.designer.cs">
+      <DependentUpon>AdUcBaiBaoKhoaHoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcBaiBaoKhoaHoc_Sua.ascx.cs">
+      <DependentUpon>AdUcBaiBaoKhoaHoc_Sua.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcBaiBaoKhoaHoc_Sua.ascx.designer.cs">
+      <DependentUpon>AdUcBaiBaoKhoaHoc_Sua.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcBaiBaoKhoaHoc_Them.ascx.cs">
+      <DependentUpon>AdUcBaiBaoKhoaHoc_Them.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcBaiBaoKhoaHoc_Them.ascx.designer.cs">
+      <DependentUpon>AdUcBaiBaoKhoaHoc_Them.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcCapDeTai.ascx.cs">
+      <DependentUpon>AdUcCapDeTai.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcCapDeTai.ascx.designer.cs">
+      <DependentUpon>AdUcCapDeTai.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcChiTietTinNhanLienHe.ascx.cs">
+      <DependentUpon>AdUcChiTietTinNhanLienHe.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcChiTietTinNhanLienHe.ascx.designer.cs">
+      <DependentUpon>AdUcChiTietTinNhanLienHe.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcChucVu.ascx.cs">
+      <DependentUpon>AdUcChucVu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcChucVu.ascx.designer.cs">
+      <DependentUpon>AdUcChucVu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcCongBoKhoaHoc.ascx.cs">
+      <DependentUpon>AdUcCongBoKhoaHoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcCongBoKhoaHoc.ascx.designer.cs">
+      <DependentUpon>AdUcCongBoKhoaHoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcCongBoKhoaHoc_Sua.ascx.cs">
+      <DependentUpon>AdUcCongBoKhoaHoc_Sua.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcCongBoKhoaHoc_Sua.ascx.designer.cs">
+      <DependentUpon>AdUcCongBoKhoaHoc_Sua.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcDanhMucQuyen.ascx.cs">
+      <DependentUpon>AdUcDanhMucQuyen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcDanhMucQuyen.ascx.designer.cs">
+      <DependentUpon>AdUcDanhMucQuyen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcGiaiThuongKhoaHoc.ascx.cs">
+      <DependentUpon>AdUcGiaiThuongKhoaHoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcGiaiThuongKhoaHoc.ascx.designer.cs">
+      <DependentUpon>AdUcGiaiThuongKhoaHoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcHocVi.ascx.cs">
+      <DependentUpon>AdUcHocVi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcHocVi.ascx.designer.cs">
+      <DependentUpon>AdUcHocVi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcKhenThuong.ascx.cs">
+      <DependentUpon>AdUcKhenThuong.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcKhenThuong.ascx.designer.cs">
+      <DependentUpon>AdUcKhenThuong.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcKhoa.ascx.cs">
+      <DependentUpon>AdUcKhoa.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcKhoa.ascx.designer.cs">
+      <DependentUpon>AdUcKhoa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcMenu.ascx.cs">
+      <DependentUpon>AdUcMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcMenu.ascx.designer.cs">
+      <DependentUpon>AdUcMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcNghienCuuSinh.ascx.cs">
+      <DependentUpon>AdUcNghienCuuSinh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcNghienCuuSinh.ascx.designer.cs">
+      <DependentUpon>AdUcNghienCuuSinh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcQuanLyGiangVien.ascx.cs">
+      <DependentUpon>AdUcQuanLyGiangVien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcQuanLyGiangVien.ascx.designer.cs">
+      <DependentUpon>AdUcQuanLyGiangVien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcQuanLyQuyen.ascx.cs">
+      <DependentUpon>AdUcQuanLyQuyen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcQuanLyQuyen.ascx.designer.cs">
+      <DependentUpon>AdUcQuanLyQuyen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcQuanLySlide.ascx.cs">
+      <DependentUpon>AdUcQuanLySlide.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcQuanLySlide.ascx.designer.cs">
+      <DependentUpon>AdUcQuanLySlide.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcQuanLySuaTinTuc.ascx.cs">
+      <DependentUpon>AdUcQuanLySuaTinTuc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcQuanLySuaTinTuc.ascx.designer.cs">
+      <DependentUpon>AdUcQuanLySuaTinTuc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcQuanLyTinNhanLienHe.ascx.cs">
+      <DependentUpon>AdUcQuanLyTinNhanLienHe.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcQuanLyTinNhanLienHe.ascx.designer.cs">
+      <DependentUpon>AdUcQuanLyTinNhanLienHe.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcQuanLyTinTuc.ascx.cs">
+      <DependentUpon>AdUcQuanLyTinTuc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcQuanLyTinTuc.ascx.designer.cs">
+      <DependentUpon>AdUcQuanLyTinTuc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcQuaTrinhCongTac_Them.ascx.cs">
+      <DependentUpon>AdUcQuaTrinhCongTac_Them.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcQuaTrinhCongTac_Them.ascx.designer.cs">
+      <DependentUpon>AdUcQuaTrinhCongTac_Them.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcSachXuatBan.ascx.cs">
+      <DependentUpon>AdUcSachXuatBan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcSachXuatBan.ascx.designer.cs">
+      <DependentUpon>AdUcSachXuatBan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcQuaTrinhCongTac.ascx.cs">
+      <DependentUpon>AdUcQuaTrinhCongTac.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcQuaTrinhCongTac.ascx.designer.cs">
+      <DependentUpon>AdUcQuaTrinhCongTac.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcTaiKhoan.ascx.cs">
+      <DependentUpon>AdUcTaiKhoan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcTaiKhoan.ascx.designer.cs">
+      <DependentUpon>AdUcTaiKhoan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcThongTinCaNhan.ascx.cs">
+      <DependentUpon>AdUcThongTinCaNhan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcThongTinCaNhan.ascx.designer.cs">
+      <DependentUpon>AdUcThongTinCaNhan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcVietTin.ascx.cs">
+      <DependentUpon>AdUcVietTin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\AdUcVietTin.ascx.designer.cs">
+      <DependentUpon>AdUcVietTin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\ucAdHocVienCaoHoc.ascx.cs">
+      <DependentUpon>ucAdHocVienCaoHoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdUserControl\ucAdHocVienCaoHoc.ascx.designer.cs">
+      <DependentUpon>ucAdHocVienCaoHoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default1.aspx.cs">
+      <DependentUpon>Default1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default1.aspx.designer.cs">
+      <DependentUpon>Default1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\guimail.aspx.cs">
+      <DependentUpon>guimail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\guimail.aspx.designer.cs">
+      <DependentUpon>guimail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Send.aspx.cs">
+      <DependentUpon>Send.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TinyFileManager.NET\classes\clsConfig.cs" />
+    <Compile Include="Admin\TinyFileManager.NET\classes\clsFileItem.cs" />
+    <Compile Include="Admin\TinyFileManager.NET\classes\clsProfile.cs" />
+    <Compile Include="Admin\TinyFileManager.NET\dialog.aspx.cs">
+      <DependentUpon>dialog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TinyFileManager.NET\dialog.aspx.designer.cs">
+      <DependentUpon>dialog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChatHub.cs" />
+    <Compile Include="ChiTiet.aspx.cs">
+      <DependentUpon>ChiTiet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChiTiet.aspx.designer.cs">
+      <DependentUpon>ChiTiet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\MessageDetail.cs" />
+    <Compile Include="Common\UserDetail.cs" />
+    <Compile Include="Content\Router.cs" />
+    <Compile Include="CVGiangVien.aspx.cs">
+      <DependentUpon>CVGiangVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CVGiangVien.aspx.designer.cs">
+      <DependentUpon>CVGiangVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Business\BaiBao.cs" />
+    <Compile Include="Data\Business\CapDeTai.cs" />
+    <Compile Include="Data\Business\ChucVu.cs" />
+    <Compile Include="Data\Business\DanhMucQuyen.cs" />
+    <Compile Include="Data\Business\DanhSachCongBoKhoaHoc.cs" />
+    <Compile Include="Data\Business\DeTaiNghienCuu.cs" />
+    <Compile Include="Data\Business\GiaiThuongKhoaHoc.cs" />
+    <Compile Include="Data\Business\GiangVien.cs" />
+    <Compile Include="Data\Business\HocVi.cs" />
+    <Compile Include="Data\Business\HocVien.cs" />
+    <Compile Include="Data\Business\KhenThuong.cs" />
+    <Compile Include="Data\Business\Khoa.cs" />
+    <Compile Include="Data\Business\LienHe.cs" />
+    <Compile Include="Data\Business\Menu.cs" />
+    <Compile Include="Data\Business\QuaTrinhCongTac.cs" />
+    <Compile Include="Data\Business\Quyen.cs" />
+    <Compile Include="Data\Business\SachXuatBan.cs" />
+    <Compile Include="Data\Business\SauDaiHoc.cs" />
+    <Compile Include="Data\Business\Slides.cs" />
+    <Compile Include="Data\Business\TinTuc.cs" />
+    <Compile Include="Data\Connection\Connect.cs" />
+    <Compile Include="Data\DataAccess\DataAccess.cs" />
+    <Compile Include="Data\Entities\BaiBao.cs" />
+    <Compile Include="Data\Entities\CapDeTai.cs" />
+    <Compile Include="Data\Entities\ChucVu.cs" />
+    <Compile Include="Data\Entities\DanhMucQuyen.cs" />
+    <Compile Include="Data\Entities\DanhSachCongBoKhoaHoc.cs" />
+    <Compile Include="Data\Entities\DeTaiNghienCuu.cs" />
+    <Compile Include="Data\Entities\GiaiThuongKhoaHoc.cs" />
+    <Compile Include="Data\Entities\GiangVien.cs" />
+    <Compile Include="Data\Entities\HocVi.cs" />
+    <Compile Include="Data\Entities\HocVien.cs" />
+    <Compile Include="Data\Entities\HocVienVaDeTaiNghienCuu.cs" />
+    <Compile Include="Data\Entities\KhenThuong.cs" />
+    <Compile Include="Data\Entities\Khoa.cs" />
+    <Compile Include="Data\Entities\LienHe.cs" />
+    <Compile Include="Data\Entities\Menu.cs" />
+    <Compile Include="Data\Entities\QuaTrinhCongTac.cs" />
+    <Compile Include="Data\Entities\Quyen.cs" />
+    <Compile Include="Data\Entities\SachXuatBan.cs" />
+    <Compile Include="Data\Entities\SauDaiHoc.cs" />
+    <Compile Include="Data\Entities\Slides.cs" />
+    <Compile Include="Data\Entities\TinTuc.cs" />
+    <Compile Include="Data\Business\HocVienVaDeTaiNghienCuu.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HienThiTimKiem.aspx.cs">
+      <DependentUpon>HienThiTimKiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HienThiTimKiem.aspx.designer.cs">
+      <DependentUpon>HienThiTimKiem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Banner.ascx.cs">
+      <DependentUpon>Banner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Banner.ascx.designer.cs">
+      <DependentUpon>Banner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\chat.ascx.cs">
+      <DependentUpon>chat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\chat.ascx.designer.cs">
+      <DependentUpon>chat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LyLichKhoaHoc.ascx.cs">
+      <DependentUpon>LyLichKhoaHoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LyLichKhoaHoc.ascx.designer.cs">
+      <DependentUpon>LyLichKhoaHoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\MenuDoc.ascx.cs">
+      <DependentUpon>MenuDoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\MenuDoc.ascx.designer.cs">
+      <DependentUpon>MenuDoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\MenuNgang.ascx.cs">
+      <DependentUpon>MenuNgang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\MenuNgang.ascx.designer.cs">
+      <DependentUpon>MenuNgang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Slides.ascx.cs">
+      <DependentUpon>Slides.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Slides.ascx.designer.cs">
+      <DependentUpon>Slides.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\TinMoi.ascx.cs">
+      <DependentUpon>TinMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\TinMoi.ascx.designer.cs">
+      <DependentUpon>TinMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcBaiBaoKhoaHoc.ascx.cs">
+      <DependentUpon>UcBaiBaoKhoaHoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcBaiBaoKhoaHoc.ascx.designer.cs">
+      <DependentUpon>UcBaiBaoKhoaHoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcBreakingNews.ascx.cs">
+      <DependentUpon>UcBreakingNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcBreakingNews.ascx.designer.cs">
+      <DependentUpon>UcBreakingNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcChiTietTinTuc.ascx.cs">
+      <DependentUpon>UcChiTietTinTuc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcChiTietTinTuc.ascx.designer.cs">
+      <DependentUpon>UcChiTietTinTuc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcDangKyChonGiangVien.ascx.cs">
+      <DependentUpon>UcDangKyChonGiangVien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcDangKyChonGiangVien.ascx.designer.cs">
+      <DependentUpon>UcDangKyChonGiangVien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcDeTaiCongTrinhKhoaHoc.ascx.cs">
+      <DependentUpon>UcDeTaiCongTrinhKhoaHoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcDeTaiCongTrinhKhoaHoc.ascx.designer.cs">
+      <DependentUpon>UcDeTaiCongTrinhKhoaHoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcGiaiThuongKhoaHoc.ascx.cs">
+      <DependentUpon>UcGiaiThuongKhoaHoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcGiaiThuongKhoaHoc.ascx.designer.cs">
+      <DependentUpon>UcGiaiThuongKhoaHoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcHienThiTimKiemGiangVien.ascx.cs">
+      <DependentUpon>UcHienThiTimKiemGiangVien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcHienThiTimKiemGiangVien.ascx.designer.cs">
+      <DependentUpon>UcHienThiTimKiemGiangVien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcHome.ascx.cs">
+      <DependentUpon>UcHome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcHome.ascx.designer.cs">
+      <DependentUpon>UcHome.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcHoTroLienHe.ascx.cs">
+      <DependentUpon>UcHoTroLienHe.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcHoTroLienHe.ascx.designer.cs">
+      <DependentUpon>UcHoTroLienHe.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcHuongDanSauDaiHoc.ascx.cs">
+      <DependentUpon>UcHuongDanSauDaiHoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcHuongDanSauDaiHoc.ascx.designer.cs">
+      <DependentUpon>UcHuongDanSauDaiHoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcKhenThuong.ascx.cs">
+      <DependentUpon>UcKhenThuong.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcKhenThuong.ascx.designer.cs">
+      <DependentUpon>UcKhenThuong.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcLietKeBaiBaoKhoaHoc.ascx.cs">
+      <DependentUpon>UcLietKeBaiBaoKhoaHoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcLietKeBaiBaoKhoaHoc.ascx.designer.cs">
+      <DependentUpon>UcLietKeBaiBaoKhoaHoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcLietKeCongTrinhKhoaHoc.ascx.cs">
+      <DependentUpon>UcLietKeCongTrinhKhoaHoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcLietKeCongTrinhKhoaHoc.ascx.designer.cs">
+      <DependentUpon>UcLietKeCongTrinhKhoaHoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcLietKeSachGiaoTrinh.ascx.cs">
+      <DependentUpon>UcLietKeSachGiaoTrinh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcLietKeSachGiaoTrinh.ascx.designer.cs">
+      <DependentUpon>UcLietKeSachGiaoTrinh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcMonGiangDay.ascx.cs">
+      <DependentUpon>UcMonGiangDay.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcMonGiangDay.ascx.designer.cs">
+      <DependentUpon>UcMonGiangDay.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcQuaTrinhGiangDayVaCongTac.ascx.cs">
+      <DependentUpon>UcQuaTrinhGiangDayVaCongTac.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcQuaTrinhGiangDayVaCongTac.ascx.designer.cs">
+      <DependentUpon>UcQuaTrinhGiangDayVaCongTac.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcSachVaGiaoTrinh.ascx.cs">
+      <DependentUpon>UcSachVaGiaoTrinh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcSachVaGiaoTrinh.ascx.designer.cs">
+      <DependentUpon>UcSachVaGiaoTrinh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcThongKeBaiBaoKhoaHoc.ascx.cs">
+      <DependentUpon>UcThongKeBaiBaoKhoaHoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcThongKeBaiBaoKhoaHoc.ascx.designer.cs">
+      <DependentUpon>UcThongKeBaiBaoKhoaHoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcThongKeCongTrinhKhoaHoc.ascx.cs">
+      <DependentUpon>UcThongKeCongTrinhKhoaHoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcThongKeCongTrinhKhoaHoc.ascx.designer.cs">
+      <DependentUpon>UcThongKeCongTrinhKhoaHoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcThongKeHocVi.ascx.cs">
+      <DependentUpon>UcThongKeHocVi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcThongKeHocVi.ascx.designer.cs">
+      <DependentUpon>UcThongKeHocVi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcThongKeSachGiaoTrinh.ascx.cs">
+      <DependentUpon>UcThongKeSachGiaoTrinh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcThongKeSachGiaoTrinh.ascx.designer.cs">
+      <DependentUpon>UcThongKeSachGiaoTrinh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcThongTinChungGiangVien.ascx.cs">
+      <DependentUpon>UcThongTinChungGiangVien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcThongTinChungGiangVien.ascx.designer.cs">
+      <DependentUpon>UcThongTinChungGiangVien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcTimKiemBaiBaoKhoaHoc.ascx.cs">
+      <DependentUpon>UcTimKiemBaiBaoKhoaHoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcTimKiemBaiBaoKhoaHoc.ascx.designer.cs">
+      <DependentUpon>UcTimKiemBaiBaoKhoaHoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcTimKiemCongBoKhoaHoc.ascx.cs">
+      <DependentUpon>UcTimKiemCongBoKhoaHoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcTimKiemCongBoKhoaHoc.ascx.designer.cs">
+      <DependentUpon>UcTimKiemCongBoKhoaHoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcTimKiemGiangVien.ascx.cs">
+      <DependentUpon>UcTimKiemGiangVien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcTimKiemGiangVien.ascx.designer.cs">
+      <DependentUpon>UcTimKiemGiangVien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcTimKiemSachXuatBan.ascx.cs">
+      <DependentUpon>UcTimKiemSachXuatBan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcTimKiemSachXuatBan.ascx.designer.cs">
+      <DependentUpon>UcTimKiemSachXuatBan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucTinNhanh.ascx.cs">
+      <DependentUpon>ucTinNhanh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucTinNhanh.ascx.designer.cs">
+      <DependentUpon>ucTinNhanh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcTinTuc.ascx.cs">
+      <DependentUpon>UcTinTuc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcTinTuc.ascx.designer.cs">
+      <DependentUpon>UcTinTuc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcTopHeader.ascx.cs">
+      <DependentUpon>UcTopHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcTopHeader.ascx.designer.cs">
+      <DependentUpon>UcTopHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UcYKienTraoDoi.ascx.cs">
+      <DependentUpon>UcYKienTraoDoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UcYKienTraoDoi.ascx.designer.cs">
+      <DependentUpon>UcYKienTraoDoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="img\Thumbs.db" />
+    <Content Include="js\tinymce\langs\readme.md" />
+    <Content Include="js\tinymce\plugins\filemanager\config.php" />
+    <Content Include="js\tinymce\plugins\filemanager\create_folder.php" />
+    <Content Include="js\tinymce\plugins\filemanager\delete_file.php" />
+    <Content Include="js\tinymce\plugins\filemanager\delete_folder.php" />
+    <Content Include="js\tinymce\plugins\filemanager\dialog.php" />
+    <Content Include="js\tinymce\plugins\filemanager\force_download.php" />
+    <Content Include="js\tinymce\plugins\filemanager\lang\bg_BG.php" />
+    <Content Include="js\tinymce\plugins\filemanager\lang\cs.php" />
+    <Content Include="js\tinymce\plugins\filemanager\lang\de.php" />
+    <Content Include="js\tinymce\plugins\filemanager\lang\en_EN.php" />
+    <Content Include="js\tinymce\plugins\filemanager\lang\fr_FR.php" />
+    <Content Include="js\tinymce\plugins\filemanager\lang\hu_HU.php" />
+    <Content Include="js\tinymce\plugins\filemanager\lang\it_IT.php" />
+    <Content Include="js\tinymce\plugins\filemanager\lang\nl.php" />
+    <Content Include="js\tinymce\plugins\filemanager\lang\pl.php" />
+    <Content Include="js\tinymce\plugins\filemanager\lang\pt_BR.php" />
+    <Content Include="js\tinymce\plugins\filemanager\lang\pt_PT.php" />
+    <Content Include="js\tinymce\plugins\filemanager\lang\ru.php" />
+    <Content Include="js\tinymce\plugins\filemanager\php_image_magician.php" />
+    <Content Include="js\tinymce\plugins\filemanager\upload.php" />
+    <Content Include="js\tinymce\plugins\filemanager\utils.php" />
+    <Content Include="js\tinymce\plugins\fileman\asp_net\main.ashx" />
+    <Content Include="js\tinymce\plugins\fileman\conf.json" />
+    <Content Include="js\tinymce\plugins\fileman\js\fileman-modified.zip" />
+    <Content Include="js\tinymce\plugins\fileman\lang\bg.json" />
+    <Content Include="js\tinymce\plugins\fileman\lang\de.json" />
+    <Content Include="js\tinymce\plugins\fileman\lang\en.json" />
+    <Content Include="js\tinymce\plugins\fileman\lang\fr.json" />
+    <Content Include="js\tinymce\plugins\fileman\web.config" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\readme.md" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="js\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="Site.Master" />
+    <Content Include="Admin\TinyFileManager.NET\bin\TinyFileManager.dll.config" />
+    <Content Include="Admin\TinyFileManager.NET\resources\files\gradient.psd" />
+    <Content Include="Admin\TinyFileManager.NET\resources\files\Home Renovations.xlsx" />
+    <Content Include="Admin\TinyFileManager.NET\Web.config" />
+    <None Include="Admin\TinyFileManager.NET\Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Admin\TinyFileManager.NET\Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="flaty\assets\bootstrap-duallistbox\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="flaty\assets\bootstrap-duallistbox\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="flaty\assets\bootstrap-duallistbox\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="flaty\assets\bootstrap-duallistbox\bootstrap\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="flaty\assets\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="flaty\assets\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="flaty\assets\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="flaty\assets\bootstrap\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="flaty\assets\font-awesome\font\fontawesome-webfontd41d.eot" />
+    <Content Include="flaty\assets\font-awesome\font\fontawesome-webfontf77b.eot" />
+    <Content Include="flaty\assets\font-awesome\font\fontawesome-webfontf77b.ttf" />
+    <Content Include="flaty\assets\font-awesome\font\fontawesome-webfontf77b.woff" />
+    <Content Include="images\dowload.docx" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\TinyFileManager.NET\resources\files\New Folder\" />
+    <Folder Include="Admin\TinyFileManager.NET\resources\thumbs\New Folder\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
+    <Folder Include="FileMem\" />
+    <Folder Include="images\Album\" />
+    <Folder Include="images\Slides\" />
+    <Folder Include="js\tinymce\plugins\fileman\tmp\" />
+    <Folder Include="js\tinymce\plugins\fileman\Uploads\Documents\" />
+    <Folder Include="js\tinymce\plugins\fileman\Uploads\FLV\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>31951</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53368/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
